@@ -1,0 +1,108 @@
+---
+title: Core Features and Capabilities
+description: Explore the main features of the platform that enable seamless documentation management and collaboration.
+---
+
+## Overview
+
+Stephen Robles provides a comprehensive set of tools for managing your project documentation. You can organize content into folders, track changes with version control, collaborate with teams, and publish to various formats. These features streamline your workflow from creation to sharing.
+
+<Columns cols={2}>
+  <Card title="Organize Documents" icon="folder" href="#document-organization">
+    Structure your docs with intuitive folders and tags.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track edits and revert changes effortlessly.
+  </Card>
+  <Card title="Collaborate Easily" icon="users" href="#collaboration">
+    Invite team members and manage permissions.
+  </Card>
+  <Card title="Publish Anywhere" icon="share-2" href="#export-publishing">
+    Export to PDF, HTML, or integrate with sites.
+  </Card>
+</Columns>
+
+## Document Organization and Folders
+
+Organize your documentation hierarchically using folders and subfolders. Create unlimited nested structures to match your project needs, such as separating API docs, user guides, and changelogs.
+
+<Steps>
+  <Step title="Create a Folder" icon="folder-plus">
+    Navigate to the root directory and select "New Folder". Name it descriptively, like `api-reference`.
+  </Step>
+  <Step title="Move Documents" icon="move">
+    Drag and drop files into folders or use the right-click context menu for bulk operations.
+  </Step>
+  <Step title="Tag for Search" icon="tag">
+    Add tags like `featured` or `draft` for quick filtering across folders.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use consistent naming conventions, such as `v1.0-user-guide`, to keep your structure intuitive.
+</Callout>
+
+## Version Control and Editing Tools
+
+Built-in version control lets you track every change, compare diffs, and restore previous versions. The rich text editor supports Markdown, MDX components, and real-time previews.
+
+```javascript
+// Example: Save a document version via API
+const docId = 'doc-123';
+await fetch(`https://api.example.com/docs/${docId}/versions`, {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${YOUR_API_KEY}` },
+  body: JSON.stringify({ content: updatedMarkdown })
+});
+```
+
+<Expandable title="Advanced Diff Viewer" default-open="false">
+  View side-by-side changes with syntax highlighting. Filter by author or date range for focused reviews.
+</Expandable>
+
+## Collaboration and Sharing Options
+
+Invite collaborators with role-based permissions: viewer, editor, or admin. Share public links or embed docs in external sites.
+
+<Tabs>
+  <Tab title="Team Invite" icon="mail">
+    Send invites via email. Set expiration dates for temporary access.
+  </Tab>
+  <Tab title="Public Sharing" icon="globe">
+    Generate shareable links with optional password protection.
+  </Tab>
+  <Tab title="Embed Code" icon="code">
+    ```html
+    <iframe src="https://docs.example.com/embed/doc-123" width="100%" height="600"></iframe>
+    ```
+  </Tab>
+</Tabs>
+
+## Export and Publishing Workflows
+
+Export your docs to multiple formats for publishing. Integrate with static site generators or host directly on custom domains.
+
+<CodeGroup tabs="Markdown,PDF,HTML">
+  ```bash
+  # Export to Markdown bundle
+  docs export project-folder --format md --output ./exports
+  ```
+  ```bash
+  # Generate PDF
+  docs export project-folder --format pdf --theme dark
+  ```
+  ```bash
+  # Build HTML site
+  docs publish project-folder --domain custom-docs.com
+  ```
+</CodeGroup>
+
+| Format | Use Case | Customization |
+|--------|----------|---------------|
+| Markdown | Git repos, blogs | Syntax highlighting |
+| PDF | Printable guides | Cover pages, themes |
+| HTML | Live sites | Custom CSS, JS |
+
+<Callout kind="success">
+  Start with a quick export to test your workflow. Link to [Quickstart](/quickstart) for setup details.
+</Callout>

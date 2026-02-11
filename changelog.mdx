@@ -1,0 +1,140 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and new features released in the Stephen Robles documentation platform.
+---
+
+## Recent Releases
+
+Stay informed about enhancements to your Stephen Robles documentation space. You receive automatic updates, but review these notes for breaking changes and migration steps.
+
+<Callout kind="info">
+  Enable notifications in your account settings to get email alerts for major releases.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+## New Features
+
+- Added real-time collaboration for shared documentation projects
+- Introduced AI-powered search with natural language queries
+- New embeddable widgets for integrating docs into your apps
+
+## Improvements
+
+- Enhanced performance with 40% faster page loads
+- Improved mobile responsiveness for all devices
+
+## Bug Fixes
+
+- Fixed rendering issues with nested code blocks
+- Resolved authentication token expiration errors
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "security"]}>
+## Security Updates
+
+- Patched vulnerabilities in webhook endpoints
+- Strengthened OAuth 2.0 token validation
+
+## Bug Fixes
+
+- Corrected export functionality for MDX files
+- Fixed sidebar navigation collapse on resize
+
+## Improvements
+
+- Better error messages for API rate limits
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+## New Features
+
+- Core documentation platform with MDX support
+- Customizable themes and brand colors (e.g., `#219C50`)
+- Full-text search across all projects
+
+## Breaking Changes
+
+- Updated API base URL from `/v0` to `/v1`
+- Removed legacy YAML frontmatter validation
+
+## Migration Steps
+
+Follow the guide below to upgrade smoothly.
+</Update>
+
+## Release Highlights
+
+<Columns cols={3}>
+  <Card title="v1.2.0" icon="zap" href="#2024-10-15">
+    Focus on collaboration and speed.
+  </Card>
+  <Card title="v1.1.0" icon="shield" href="#2024-09-20">
+    Security and stability improvements.
+  </Card>
+  <Card title="v1.0.0" icon="rocket" href="#2024-08-10">
+    Initial stable release.
+  </Card>
+</Columns>
+
+## Migration Guide
+
+When updating to a new version, follow these steps to avoid disruptions.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+    Export all projects via the dashboard.
+
+````bash
+# From CLI
+npx stephen-robles-docs export --all > backup.json
+````
+  </Step>
+
+  <Step title="Review Breaking Changes" icon="alert-triangle">
+    Check the `Breaking Changes` section in each release above.
+  </Step>
+
+  <Step title="Update Configuration" icon="settings">
+    <Tabs>
+      <Tab title="YAML Config" icon="file">
+````yaml
+# docs.config.yaml
+version: "1.2.0"
+brandColor: "#219C50"
+features:
+  collaboration: true
+````
+      </Tab>
+      <Tab title="Environment Vars" icon="terminal">
+````bash
+export DOCS_VERSION=1.2.0
+export BRAND_COLOR=#219C50
+````
+      </Tab>
+    </Tabs>
+  </Step>
+
+  <Step title="Test Locally" icon="play">
+    Run your docs site in development mode to verify.
+  </Step>
+
+  <Step title="Deploy" icon="upload">
+    Push changes to production.
+  </Step>
+</Steps>
+
+<Callout kind="tip" title="Pro Tip">
+  Use the [Stephen Robles CLI](https://docs.example.com/cli) for automated migrations: `npx stephen-robles-docs migrate v1.2.0`.
+</Callout>
+
+## How to Stay Updated
+
+- Follow release announcements on your dashboard
+- Check [GitHub releases](https://github.com/stephenrobles/docs-platform) for detailed diffs
+- Join the community forum for discussions
+
+For older versions, expand the details below.
+
+<Expandable title="Full v0.9.x Changelog" default-open="false">
+  Legacy updates include initial beta features and early bug fixes.
+</Expandable>

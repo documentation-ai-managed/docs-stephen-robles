@@ -1,0 +1,128 @@
+---
+title: Getting Started with Your Documentation Space
+description: Set up your account and create your first documentation project in minutes to begin organizing your content effectively.
+---
+
+## Prerequisites
+
+<Callout kind="info">
+Before you begin, ensure you have:
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: Existing Markdown files or content to import
+</Callout>
+
+## Sign Up and Log In
+
+Follow these steps to create your account and access the dashboard.
+
+<Steps>
+  <Step title="Visit the Sign-Up Page" icon="globe">
+    Navigate to the Stephen Robles documentation space sign-up page at `https://app.stephenrobles.com/signup`.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email address, create a strong password, and complete the CAPTCHA if prompted.
+  </Step>
+  <Step title="Verify Your Email" icon="mail">
+    Check your inbox for a verification email and click the link to activate your account.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to `https://app.stephenrobles.com/login`, enter your credentials, and access your dashboard.
+  </Step>
+</Steps>
+
+## Dashboard Tour
+
+Once logged in, explore the main dashboard areas.
+
+<Columns cols={3}>
+  <Card title="Projects" icon="folder" href="#">
+    View and manage all your documentation projects. Create new ones with a single click.
+  </Card>
+  <Card title="Documents" icon="file-text" href="#">
+    Organize individual docs within projects. Use folders for better structure.
+  </Card>
+  <Card title="Settings" icon="settings" href="#">
+    Customize your workspace, manage teams, and configure integrations.
+  </Card>
+</Columns>
+
+## Create Your First Document
+
+Build your initial documentation project quickly.
+
+<Steps>
+  <Step title="Create a New Project" icon="plus">
+    Click the `New Project` button on the dashboard. Name it `My First Docs` and select a template.
+  </Step>
+  <Step title="Add a Document" icon="file-plus">
+    Inside the project, click `New Document`. Choose Markdown or MDX format.
+  </Step>
+  <Step title="Edit Content" icon="edit-3">
+    Use the built-in editor to add headings, lists, and components. Preview changes in real-time.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Save and publish to generate a live URL like `https://docs.stephenrobles.com/my-first-docs`.
+  </Step>
+</Steps>
+
+Here's a simple MDX example for your first document:
+
+<CodeGroup tabs="MDX,Markdown">
+  ```mdx
+  ## Welcome
+
+  This is your first document.
+
+  - List item 1
+  - List item 2
+  ```
+  ```markdown
+  # Welcome
+
+  This is your first document.
+
+  - List item 1
+  - List item 2
+  ```
+</CodeGroup>
+
+## Import Existing Content
+
+Bring in your current files using these methods.
+
+<Tabs>
+  <Tab title="Markdown Files" icon="file-text">
+    Drag and drop `.md` files into the project uploader. Supports bulk import.
+
+    <Expandable title="Advanced Options" default-open="false">
+      Use ZIP archives for folders. Metadata like frontmatter is preserved.
+    </Expandable>
+  </Tab>
+  <Tab title="Google Docs" icon="chrome">
+    Connect your Google account via OAuth. Select docs to import as Markdown.
+
+    ```bash
+    # Example CLI sync (if enabled)
+    docs-sync --from google --to project-id
+    ```
+  </Tab>
+  <Tab title="GitHub Repo" icon="github">
+    Link a public or private repo. Import README.md and other Markdown files automatically.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+Ready to dive deeper? Check the [Introduction](/introduction) for features overview or explore advanced topics.
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customize Your Space" icon="paint-bucket" href="/configuration">
+    Learn configuration options for themes and permissions.
+  </Card>
+  <Card title="Team Collaboration" icon="users" href="#">
+    Invite team members and set up real-time editing.
+  </Card>
+</Columns>
